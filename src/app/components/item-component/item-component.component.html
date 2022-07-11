@@ -1,0 +1,18 @@
+<li *ngFor="let task of tasks; let i=index" class="item" [ngClass]="{'iscomplete': task.status == 1}">
+
+    <p [ngClass]="{'notComplete': task.status == 2}" > 
+    {{task.title}} {{task.status == 1 ? '(Complete)' : '(Not Complete)'}}
+    </p>
+    <div class="action">
+        <button class="btn btn-outline-success" (click)="changeStatus(task)" >
+            Complete
+            <i class="fa-solid fa-check"></i>
+        </button>
+        <button class="btn btn-outline-warning" (click)="deleteTask(task)">
+            Delete
+            <i class="fa-solid fa-x"></i>
+        </button>
+    </div>
+</li>
+
+<div class="btn btn-secondary item">Total Items: {{tasks.length}}</div>

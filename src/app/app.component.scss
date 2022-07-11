@@ -1,0 +1,30 @@
+
+.box{   
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#fff ;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 1.25rem 0;
+
+    &:hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .todo-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 3em;
+        margin-top: 2rem;
+    
+    
+        .description{
+            text-align: justify;
+        }
+    
+    }
+}
